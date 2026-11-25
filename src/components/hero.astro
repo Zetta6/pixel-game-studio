@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import imagenHero from "../assets/Hero.jpg";
+---
+
+<section class="hero">
+
+    <div class="presentacion">
+
+        <span class="etiqueta">
+            Estudio independiente de videojuegos
+        </span>
+
+        <h1>Entretenimiento por amor al arte</h1>
+
+        <p>
+            En Pixel Games Studio creamos experiencias
+            únicas a través de los videojuegos, combinando
+            creatividad, tecnología y pasión.
+        </p>
+
+        <a href="/videojuegos" class="boton">
+            Nuestros videojuegos
+        </a>
+
+    </div>
+
+    <div class="imagen">
+        <Image
+            src={imagenHero}
+            alt="Fondo Pixel Games Studio"
+            widths={[480, 768, 1200]}
+            sizes="(max-width: 768px) 100vw, 45vw"
+            format="webp"
+            loading="eager"
+        />
+</div>
+
+</section>
+
+<style>
+
+    .hero {
+        min-height: 600px;
+        padding: 60px 8%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .etiqueta {
+        color: #a78bfa;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 56px;
+        line-height: 1.1;
+        margin: 20px 0;
+    }
+
+    p {
+        color: #b8b8c4;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .boton {
+        display: inline-block;
+        background-color: #7c3aed;
+        padding: 15px 25px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .boton:hover {
+        background-color: #6d28d9;
+    }
+
+    .imagen {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+
+    .imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+    @media (max-width: 768px) {
+
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+    }
+
+</style>

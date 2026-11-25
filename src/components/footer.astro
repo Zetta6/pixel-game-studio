@@ -1,0 +1,103 @@
+<footer class="pie">
+
+    <div class="contenedor">
+
+        <div class="identidad">
+
+            <a href="/" class="logo">
+                PIXEL GAMES
+                <span>STUDIO</span>
+            </a>
+
+            <p>Entretenimiento por amor al arte.</p>
+
+        </div>
+
+        <nav class="enlaces">
+            <a href="/">Inicio</a>
+            <a href="/quienes-somos">Quiénes somos</a>
+            <a href="/videojuegos">Videojuegos</a>
+        </nav>
+
+    </div>
+
+    <div class="derechos">
+
+        <p>
+            © {new Date().getFullYear()} Pixel Games Studio.
+        </p>
+
+        <p>
+            Evaluación 3 de Carlos Zárate y María Ibañez para Interfaz de Usuario.
+        </p>
+
+    </div>
+
+</footer>
+
+<style>
+
+    .pie {
+        background-color: #1c1c24;
+        border-top: 2px solid #8b5cf6;
+        padding: 40px 8% 20px;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .logo {
+        display: inline-block;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        display: block;
+        color: #a78bfa;
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+
+    .identidad p {
+        color: #b8b8c4;
+        font-size: 14px;
+    }
+
+    .enlaces {
+        display: flex;
+        gap: 25px;
+    }
+
+    .enlaces a:hover {
+        color: #a78bfa;
+    }
+
+    .derechos {
+        border-top: 1px solid #30303a;
+        margin-top: 30px;
+        padding-top: 20px;
+        text-align: center;
+        color: #b8b8c4;
+        font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+
+        .contenedor {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .enlaces {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+    }
+
+</style>

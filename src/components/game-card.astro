@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+
+const { titulo, descripcion, imagen } = Astro.props;
+---
+
+<article class="tarjeta">
+
+    <Image
+        src={imagen}
+        alt={titulo}
+        widths={[320, 640, 960]}
+        sizes="(max-width: 768px) 100vw, 30vw"
+        format="webp"
+        loading="lazy"
+    />
+
+    <div class="contenido">
+        <h3>{titulo}</h3>
+        <p>{descripcion}</p>
+    </div>
+
+</article>
+
+<style>
+
+    .tarjeta {
+        background-color: #1c1c24;
+        border: 1px solid #30303a;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .tarjeta:hover {
+        transform: translateY(-8px);
+        border-color: #8b5cf6;
+    }
+
+    .tarjeta img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .contenido {
+        padding: 25px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 0 0 15px;
+    }
+
+    p {
+        color: #b8b8c4;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+</style>

@@ -1,0 +1,77 @@
+<section class="valores">
+
+    <h2>Nuestra filosofía</h2>
+
+    <div class="contenedor">
+
+        <article>
+            <h3>Misión</h3>
+
+            <p>
+                Desarrollar videojuegos originales que
+                combinen arte, creatividad y tecnología
+                para ofrecer experiencias significativas
+                a nuestros jugadores.
+            </p>
+        </article>
+
+        <article>
+            <h3>Visión</h3>
+
+            <p>
+                Convertirnos en un estudio independiente
+                reconocido por la calidad, identidad
+                artística e innovación de sus videojuegos.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<style>
+
+    .valores {
+        padding: 80px 8%;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        margin: 0 0 45px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    article {
+        background-color: #1c1c24;
+        border-left: 4px solid #8b5cf6;
+        border-radius: 10px;
+        padding: 35px;
+    }
+
+    h3 {
+        color: #a78bfa;
+        font-size: 26px;
+        margin-top: 0;
+    }
+
+    p {
+        color: #b8b8c4;
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+
+        .contenedor {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>

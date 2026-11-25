@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/layout.astro";
+import GamesIntro from "../components/games-intro.astro";
+import Proyectos from "../components/proyectos.astro";
+import Proximamente from "../components/lanzamientos-proximos.astro";
+---
+
+<Layout titulo="Videojuegos">
+
+    <GamesIntro />
+
+    <Proyectos
+        titulo="Nuestro catálogo"
+        subtitulo="Explora los videojuegos de nuestro estudio."
+    />
+
+    <Proximamente />
+
+</Layout>

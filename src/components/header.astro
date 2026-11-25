@@ -1,0 +1,67 @@
+<header class="cabecera">
+
+    <a href="/" class="logo">
+        PIXEL GAMES
+        <span>STUDIO</span>
+    </a>
+
+    <nav class="navegacion">
+        <a href="/">Inicio</a>
+        <a href="/quienes-somos">Quiénes somos</a>
+        <a href="/videojuegos">Videojuegos</a>
+    </nav>
+
+</header>
+
+<style>
+
+    .cabecera {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 100;
+
+        background-color: #1c1c24;
+        border-bottom: 2px solid #8b5cf6;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 5px;
+        color: #a78bfa;
+    }
+
+    .navegacion {
+        display: flex;
+        gap: 30px;
+    }
+
+    .navegacion a:hover {
+        color: #a78bfa;
+    }
+
+    @media (max-width: 768px) {
+        .navegacion {
+            display: none;
+        }
+
+        .cabecera {
+            justify-content: center;
+        }
+    }
+
+</style>

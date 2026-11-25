@@ -1,0 +1,99 @@
+<section class="lanzamientos">
+
+    <div class="contenido">
+
+        <span>EN DESARROLLO</span>
+
+        <h2>Lo mejor está por venir</h2>
+
+        <p>
+            Estamos trabajando en nuevas aventuras,
+            explorando nuevas ideas y desarrollando
+            experiencias que llevarán nuestra creatividad
+            aún más lejos.
+        </p>
+
+        <div class="estado">
+            <span class="indicador"></span>
+            Nuevos proyectos en desarrollo
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+    .lanzamientos {
+        padding: 80px 8%;
+    }
+
+    .contenido {
+        background: linear-gradient(
+            135deg,
+            #24163d,
+            #1c1c24
+        );
+
+        border: 1px solid #8b5cf6;
+        border-radius: 15px;
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .contenido > span {
+        color: #a78bfa;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #b8b8c4;
+        line-height: 1.7;
+    }
+
+    .estado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        color: #a78bfa;
+    }
+
+    .indicador {
+        width: 10px;
+        height: 10px;
+        background-color: #a78bfa;
+        border-radius: 50%;
+        animation: pulso 2s infinite;
+    }
+
+    @keyframes pulso {
+
+        0%, 100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.3;
+        }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .indicador {
+            animation: none;
+        }
+
+    }
+
+</style>

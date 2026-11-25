@@ -1,0 +1,79 @@
+---
+import GameCard from "./game-card.astro";
+
+import neon from "../assets/distrito-neon.jpg";
+import kingdom from "../assets/lost-kingdom.jpg";
+import ultratumba from "../assets/Cronicas-de-ultratumba.jpg";
+
+const {
+    titulo = "Proyectos destacados",
+    subtitulo = "Descubre los mundos que estamos creando."
+} = Astro.props;
+---
+
+<section class="proyectos">
+
+    <h2>{titulo}</h2>
+
+    <p class="subtitulo">
+        {subtitulo}
+    </p>
+
+    <div class="contenedor">
+
+        <GameCard
+            titulo="Distrito neon"
+            descripcion="Sumérgete en una ciudad futurista donde la tecnología y el caos dominan las calles."
+            imagen={neon}
+        />
+
+        <GameCard
+            titulo="Lost Kingdom"
+            descripcion="Explora un reino olvidado lleno de misterios, criaturas y antiguas leyendas."
+            imagen={kingdom}
+        />
+
+        <GameCard
+            titulo="Cronicas de ultratumba"
+            descripcion="Viaja y descubre los secretos de un mundo abandonado por la mano de Dios."
+            imagen={ultratumba}
+        />
+
+    </div>
+
+</section>
+
+<style>
+
+    .proyectos {
+        padding: 80px 8%;
+        background-color: #15151b;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        margin: 0 0 15px;
+    }
+
+    .subtitulo {
+        text-align: center;
+        color: #b8b8c4;
+        margin-bottom: 45px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    @media (max-width: 768px) {
+
+        .contenedor {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>

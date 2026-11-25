@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets";
+
+import developer from "../assets/developer.jpg";
+import artist from "../assets/artista.jpg";
+import designer from "../assets/designer.jpg";
+
+const integrantes = [
+    {
+        nombre: "Hideo Kojima",
+        cargo: "Diseñador de videojuegos",
+        imagen: designer
+    },
+    {
+        nombre: "Akira Toriyama",
+        cargo: "Director artístico",
+        imagen: artist
+    },
+    {
+        nombre: "Tony Stark",
+        cargo: "Programador de videojuegos",
+        imagen: developer
+    }
+];
+---
+
+<section class="equipo">
+
+    <h2>Nuestro equipo</h2>
+
+    <p class="subtitulo">
+        Las personas detrás de nuestros mundos.
+    </p>
+
+    <div class="contenedor">
+
+        {integrantes.map((integrante) => (
+
+            <article class="integrante">
+
+                <Image
+                    src={integrante.imagen}
+                    alt={integrante.nombre}
+                    widths={[240, 480, 720]}
+                    sizes="(max-width: 768px) 70vw, 25vw"
+                    format="webp"
+                    loading="lazy"
+                />
+
+                <h3>{integrante.nombre}</h3>
+
+                <p>{integrante.cargo}</p>
+
+            </article>
+
+        ))}
+
+    </div>
+
+</section>
+
+<style>
+
+    .equipo {
+        padding: 80px 8%;
+        background-color: #15151b;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin: 0 0 15px;
+    }
+
+    .subtitulo {
+        color: #b8b8c4;
+        margin-bottom: 45px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .integrante {
+        background-color: #1c1c24;
+        border: 1px solid #30303a;
+        border-radius: 12px;
+        padding: 30px;
+    }
+
+    .integrante img {
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #8b5cf6;
+        margin: 0 auto;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .integrante p {
+        color: #a78bfa;
+    }
+
+    @media (max-width: 768px) {
+
+        .contenedor {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
